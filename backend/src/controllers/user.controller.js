@@ -21,7 +21,14 @@ const registerUser = async (req, res) => {
             loggedIn: false,
         });
 
-        res.status(201).json({ message: "User Created Successfully ! ", user: { id: user.id, email: user.email, username: user.username } })
+        res.status(201).json({
+            message: "User Created Successfully ! ",
+            user: {
+                id: user.id,
+                email: user.email,
+                username: user.username
+            }
+        })
 
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error !", error: error.message });

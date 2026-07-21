@@ -15,7 +15,7 @@ const userSchema = new Schema(
         password: {
             type: String,
             required: true,
-            minLength: 8,
+            minLength: 4,
             maxLength: 30,
         },
 
@@ -33,4 +33,4 @@ const userSchema = new Schema(
     }
 )
 
-export default User = mongoose.model("User", userSchema);
+export const User = mongoose.model("User", userSchema);
